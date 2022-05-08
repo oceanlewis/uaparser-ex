@@ -1,4 +1,4 @@
-defmodule Uaparser.MixProject do
+defmodule UAParser.MixProject do
   use Mix.Project
 
   def project do

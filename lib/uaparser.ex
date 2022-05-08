@@ -1,6 +1,6 @@
-defmodule Uaparser do
+defmodule UAParser do
   @moduledoc """
-  Documentation for `Uaparser`.
+  Documentation for `UAParser`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Uaparser do
 
   ## Examples
 
-      iex> Uaparser.hello()
+      iex> UAParser.hello()
       :world
 
   """

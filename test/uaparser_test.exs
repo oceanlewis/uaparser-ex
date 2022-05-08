@@ -1,8 +1,8 @@
-defmodule UaparserTest do
+defmodule UAParserTest do
   use ExUnit.Case
-  doctest Uaparser
+  doctest UAParser
 
   test "greets the world" do
-    assert Uaparser.hello() == :world
+    assert UAParser.hello() == :world
   end
 end
