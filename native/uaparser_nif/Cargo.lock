@@ -220,7 +220,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "uaparser_ex"
+name = "uaparser_nif"
 version = "0.1.0"
 dependencies = [
  "lazy_static",

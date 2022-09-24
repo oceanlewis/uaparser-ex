@@ -1,15 +1,17 @@
 defmodule UAParser do
   use Rustler,
     otp_app: :uaparser,
-    crate: :uaparser
+    crate: :uaparser_nif
 
   def hello do
     :world
   end
 
-  def add(_a, _b), do: :erlang.nif_error(:nif_not_loaded)
+  def add(_a, _b), do: err()
 
-  def load(), do: :erlang.nif_error(:nif_not_loaded)
+  def load(), do: err()
 
-  def parse(user_agent) when is_binary(user_agent), do: :erlang.nif_error(:nif_not_loaded)
+  def parse(_user_agent), do: err()
+
+  defp err(), do: :erlang.nif_error(:nif_not_loaded)
 end
