@@ -28,3 +28,6 @@ uaparser-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# Ignore .so files
+**.so

@@ -1,18 +1,15 @@
 defmodule UAParser do
-  @moduledoc """
-  Documentation for `UAParser`.
-  """
+  use Rustler,
+    otp_app: :uaparser,
+    crate: :uaparser
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> UAParser.hello()
-      :world
-
-  """
   def hello do
     :world
   end
+
+  def add(_a, _b), do: :erlang.nif_error(:nif_not_loaded)
+
+  def load(), do: :erlang.nif_error(:nif_not_loaded)
+
+  def parse(user_agent) when is_binary(user_agent), do: :erlang.nif_error(:nif_not_loaded)
 end

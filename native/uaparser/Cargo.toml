@@ -1,14 +1,15 @@
 [package]
-name = "uaparser"
+name = "uaparser_ex"
 version = "0.1.0"
 authors = []
 edition = "2018"
 
 [lib]
-name = "uaparser"
+name = "uaparser_ex"
 path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-rustler = "0.25.0"
-uaparser-lib = { version = "0.5.1", package = "uaparser" }
+rustler = "0.26.0"
+uaparser = "0.6.0"
+lazy_static = "^1.4"
