@@ -45,5 +45,7 @@ mkShell {
 
     export LANG=en_US.UTF-8
     export ERL_AFLAGS="-kernel shell_history enabled"
+
+    export MIX_ENV=prod
   '';
 }

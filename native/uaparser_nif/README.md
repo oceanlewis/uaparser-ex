@@ -1,4 +1,4 @@
-# NIF for Elixir.UAParser
+# NIF for Elixir.UAParserRS
 
 ## To build the NIF module:
 
@@ -7,7 +7,7 @@
 ## To load the NIF:
 
 ```elixir
-defmodule UAParser do
+defmodule UAParserRS do
     use Rustler, otp_app: :uaparser, crate: "uaparser"
 
     # When your NIF is loaded, it will override this function.

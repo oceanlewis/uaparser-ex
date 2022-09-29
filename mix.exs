@@ -1,9 +1,9 @@
-defmodule UAParser.MixProject do
+defmodule UAParserRS.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :uaparser,
+      app: :uaparser_rs,
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
@@ -25,8 +25,7 @@ defmodule UAParser.MixProject do
       {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
       {:benchee, "~> 1.1.0"},
       {:ua_inspector, "~> 3.0"},
-      {:ua_parser, "~> 1.8"},
-      {:nimble_csv, "~>1.2.0"}
+      {:ua_parser, "~> 1.8"}
     ]
   end
 end

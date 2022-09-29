@@ -1,4 +1,4 @@
-# UAParser
+# UAParserRS
 
 **TODO: Add description**
 

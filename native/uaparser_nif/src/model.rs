@@ -1,6 +1,23 @@
 use rustler::NifStruct;
 
 #[derive(Debug, NifStruct)]
+#[module = "Client"]
+pub struct Client {
+    pub os: OS,
+    pub device: Device,
+    pub user_agent: UserAgent,
+}
+impl From<uaparser::Client<'_>> for Client {
+    fn from(client: uaparser::Client) -> Self {
+        Self {
+            os: OS::from(client.os),
+            device: Device::from(client.device),
+            user_agent: UserAgent::from(client.user_agent),
+        }
+    }
+}
+
+#[derive(Debug, NifStruct)]
 #[module = "UserAgent"]
 pub struct UserAgent {
     pub family: String,
