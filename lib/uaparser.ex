@@ -1,17 +1,16 @@
-defmodule UAParser do
+defmodule UAParserRS do
   use Rustler,
-    otp_app: :uaparser,
-    crate: :uaparser_nif
+    otp_app: :uaparser_rs,
+    crate: :uaparser_nif,
+    mode: :release
 
-  def hello do
-    :world
-  end
+  def add(_a, _b), do: nif()
 
-  def add(_a, _b), do: err()
+  def load(), do: nif()
 
-  def load(), do: err()
+  def parse(user_agent) when is_binary(user_agent), do: nif()
+  
+  def parse_all(user_agents) when is_list(user_agents), do: nif()
 
-  def parse(_user_agent), do: err()
-
-  defp err(), do: :erlang.nif_error(:nif_not_loaded)
+  defp nif(), do: :erlang.nif_error(:nif_not_loaded)
 end

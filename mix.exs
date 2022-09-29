@@ -22,7 +22,11 @@ defmodule UAParser.MixProject do
   defp deps do
     [
       {:rustler, "~> 0.26.0"},
-      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
+      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false},
+      {:benchee, "~> 1.1.0"},
+      {:ua_inspector, "~> 3.0"},
+      {:ua_parser, "~> 1.8"},
+      {:nimble_csv, "~>1.2.0"}
     ]
   end
 end
