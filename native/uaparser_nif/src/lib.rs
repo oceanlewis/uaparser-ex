@@ -1,8 +1,8 @@
 mod model;
-use lazy_static::{initialize, lazy_static};
-use uaparser::{Parser, UserAgentParser};
 
-use crate::model::Client;
+use lazy_static::{initialize, lazy_static};
+use model::Client;
+use uaparser::{Parser, UserAgentParser};
 
 mod atoms {
     rustler::atoms! {

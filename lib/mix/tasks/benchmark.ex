@@ -7,7 +7,7 @@ defmodule Mix.Tasks.Benchmark do
   @shortdoc "Runs a simple benchmark"
   def run(_) do
     # add_benchee()
-    # uaparser_benchee()
+    uaparser_benchee()
     # simple_bench()
   end
 
